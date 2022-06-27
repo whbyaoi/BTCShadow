@@ -10,7 +10,7 @@ And after choosing the number of blocks loaded, the data will be stored in monit
 
 
 ## Monitor
-The monitor will be created when loading the data or other operations that generating data. It's a list view that shows addresses and hash value of transactions.
+The monitor will be created when loading the data or other operations that generates data. It's a list view that shows addresses and hash value of transactions.
 
 ![monitor](Images/monitor.png)
 
@@ -23,13 +23,14 @@ In this module, you can:
 + Add to monitor. Add the selected address to another monitor.
 
 ## Graph page
-When call *Update bound page* function of monitor, it will create a corresponding graph page in center. Each monitor corresponds to each graph page.
+When call ___Update bound page___ function of monitor, it will create a corresponding graph page in center. Each monitor corresponds to each graph page. The bound graph page will be removed if corresponded monitor is removed.
 
 ![two graph types](Images/two graph types.png)
 Graph page aims to show the graph of bitcoin data in isomorphic or heterogeneous form. 
 
-In an isomorphic graph, white node represents account and cyan line represents flow of bitcoins. In a heterogeneous graph, white node represents account, 
-yellow node represents transaction, green line represents the flow of bitcoins from transaction to account, red line represents the flow of bitcoins from account to transaction and purple line represents the bidirectional.
+In an isomorphic graph, white node represents account and cyan line represents flow of bitcoins. 
+
+In a heterogeneous graph, white node represents account, yellow node represents transaction, green line represents the flow of bitcoins from transaction to account, red line represents the flow of bitcoins from account to transaction and purple line represents the bidirectional.
 
 ![graph](Images/graph.png)
 
@@ -41,7 +42,60 @@ In this module, you can:
 + Delete selected node.
 + Add selected node to monitor. 
 + Create N-hop graph of selected node.
-+ Create island(biggest connected graph) of selected node.
++ Create island(the biggest connected graph) of selected node.
+
+## Toolbar for graph
+Toolbar contains a set of tools for graph page, which can move view or change the color of item in graph to illustrate analytical results. Each button from left denote:
+
+![toolbar](Images/toolbar.png)
+
++ Redo the operation that edits graph 
++ Undo the operation that edits graph
++ Click mode
++ Drag mode
++ Multi-selection mode
++ Zoom in
++ Zoom out
++ Back to graph center
++ Edit the label of one selected node.
++ Edit the color of one node. Choose a color first and then click one node to change the color of it.
++ Edit the color of nodes by rules. There are three rules:
+    + Connection. When using this rule, the nodes around the clicked node will be colored by circle and circle according to the number of clicks.
+    + UTXO. This is similar to Connection, but the nodes of neighbor circles must have relationship of UTXO.
+    + Label. Edit color of all nodes that have same the label.
++ Find the path between two nodes and color it.
++ Transform to heat map by rules that can be customized. 
++ Reset the graph.
+
+## Attributes and context display
+This two modules display attributes of selected node and information of monitor in text form. The information displayed can be customized.
+
+## Related object
+This module will show the items which is related to the selected item in graph. It's in recursive tree form, which means every item in this module will also have a subtree. The depth of root tree depends on settings. You can click with right button in this module to call ___Reset in depth___, which can set the depth of root tree.
+
+![related](Images/related%20object.png)
+
+If you click an input item or an output item with right button, you can call ___Trace/Follow the UTXO(5)___ where ___5___ means the depth of trace or follow. And the result is that the road that utxo passed will be colored in red.
+
+## Filter
+This module is for filtering out the account that you don't want. It consists of three parts: filter library, filter constructor and filter parameter.
+
+![filter](Images/filter.png)
+
+You can follow these operations:
+
+1. Drag the filter component from filter library to filter constructor. A filter component can be the child or sibling of one filter component.
+
+2. Set the parameter of filter component in filter constructor.
+
+3. Select a monitor for the final filter that your constructor and click Run button.
+
+Then you will get a new monitor after filtering.
+
+## Algorithm
+This module offer to conduct an analysis, which is shown in a chart.
+
+
 
 
 [website]: https://btc.com/api-doc
