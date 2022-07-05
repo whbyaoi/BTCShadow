@@ -70,7 +70,24 @@ Toolbar contains a set of tools for graph page, which can move view or change th
 + Reset the graph.
 
 ## Attributes and context display
-This two modules display attributes of selected node and information of monitor in text form. The information displayed can be customized.
+This two modules display attributes of selected node and information of monitor in text form. The information displayed can be customized. Specifically, you can edit the .ini files in Customization folder. The content looks like:
+
+```ini
+[Attribute Name]
+# your python code here
+# you can use the variable "item" which is the item selected in graph and it's structure is in structure folder
+# you must define the value, which is shown in BTCShadow finally
+value = *****
+
+[Example]
+# here is a example that return the type of item
+value = "Account" if isinstance(item, AccountPoint) else "Transaction"
+```
+And you follow these to define your attribute:
+1. define the name of attribute
+2. write python code with variables offered.
+3. define the variable "value" to end
+
 
 ## Related object
 This module will show the items which is related to the selected item in graph. It's in recursive tree form, which means every item in this module will also have a subtree. The depth of root tree depends on settings. You can click with right button in this module to call ___Reset in depth___, which can set the depth of root tree.
