@@ -1,7 +1,7 @@
 # BTCShadow
 BTC Shadow is a highly interactive tool for analyzing and exploring bitcoin data in graph form. Currently, the BTC Shadow is updating. But you can also utilize it.
 
-The tool and examples can be obtained in <a>https://1drv.ms/u/s!AibfqbdWxrYZh34CgnoLt06sowF_  and https://1drv.ms/u/s!AibfqbdWxrYZh31Cvz0EHnH7S0OX?e=apjCv4
+The tool and examples can be obtained in <a>https://1drv.ms/u/s!AibfqbdWxrYZh38Yp6L8IHqG8qhi?e=md1jwT  and https://1drv.ms/u/s!AibfqbdWxrYZh31Cvz0EHnH7S0OX?e=apjCv4
 
 ## Loading data
 BTC Shadow supports only one type of bitcoin data, which is obtained by crawling the [website] in JSON format. You can click File - Add and then choose a folder witch contains blocks folders. They look like these below.
@@ -89,6 +89,8 @@ And you follow these to define your attribute:
 3. define the variable "value" to end
 
 
+
+
 ## Related object
 This module will show the items which is related to the selected item in graph. It's in recursive tree form, which means every item in this module will also have a subtree. The depth of root tree depends on settings. You can click with right button in this module to call ___Reset in depth___, which can set the depth of root tree.
 
@@ -109,12 +111,10 @@ You can follow these operations:
 
 3. Select a monitor for the final filter that your constructor and click Run button.
 
-Then you will get a new monitor after filtering.
+Then you will get a new monitor after filtering. The customization of filters is similar to attribute and the details can be found in .ini files.
 
-## Algorithm
+## Distribution
 This module offer to conduct an analysis, which is shown in a chart.
-
-
 
 
 [website]: https://btc.com/api-doc
