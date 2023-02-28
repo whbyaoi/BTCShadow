@@ -28,6 +28,7 @@ In this module, you can:
 When call ___Update bound page___ function of monitor, it will create a corresponding graph page in center. Each monitor corresponds to each graph page. The bound graph page will be removed if corresponded monitor is removed.
 
 ![two graph types](Images/two graph types.png)
+
 Graph page aims to show the graph of bitcoin data in isomorphic or heterogeneous form. 
 
 In an isomorphic graph, white node represents account and cyan line represents flow of bitcoins. 
