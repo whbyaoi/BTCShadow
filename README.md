@@ -1,7 +1,7 @@
 # BTCShadow
-BTC Shadow is a highly interactive tool for analyzing and exploring bitcoin data in graph form. Currently, the BTC Shadow is updating. But you can also utilize it.
+BTC Shadow is a highly interactive tool for analyzing and exploring bitcoin data in graph form. Currently, the functions of BTC Shadow is not completed and in the future we wil update. 
 
-The tool and examples can be obtained in <a>https://1drv.ms/u/s!AibfqbdWxrYZh38Yp6L8IHqG8qhi?e=md1jwT  and https://1drv.ms/u/s!AibfqbdWxrYZh31Cvz0EHnH7S0OX?e=apjCv4
+We provide an excutable version and an example dataset to try BTC shadow. The tool and examples can be obtained in <a>https://1drv.ms/u/s!AibfqbdWxrYZh38Yp6L8IHqG8qhi?e=md1jwT  and https://1drv.ms/u/s!AibfqbdWxrYZh31Cvz0EHnH7S0OX?e=apjCv4
 
 ## Loading data
 BTC Shadow supports only one type of bitcoin data, which is obtained by crawling the [website] in JSON format. You can click File - Add and then choose a folder witch contains blocks folders. They look like these below.
